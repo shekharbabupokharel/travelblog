@@ -91,37 +91,54 @@ body{
 
 /* body 3 */
 
+
+
 .body3{
     background: url(assets/bg.jpg) no-repeat center;
     padding-top: 20px;
     padding-bottom: 15px;
+    background-size: cover;
+    filter: grayscale(0.2);
     
 }
-
+.art{
+    display: flex;
+    gap:1rem;
+}
 .article{
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    gap:1rem;
+    flex-direction: column;
+    width:60%;
+    
 }
 .article1{
-    width: 60%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+  
     background: rgba(221, 235, 235, 0.418);
-    margin-right:10px;
+    gap: 1rem;
+
     border-radius: 9px;
     box-shadow: -5px 5px 10px 5px rgba(0, 0, 0, 0.705);
     
 }
-.article2{
+.sidelink{
     width: 40%;
+ 
+    
+}
+.article2{
+    width: 100%;
     border-radius: 9px;
     background-color: rgba(171, 224, 224, 0.418);
     box-shadow: -5px 5px 10px 5px rgba(0, 0, 0, 0.664);
+    margin-bottom: 15px;
+
 }
 .article11{
     width: 40%;
-    padding: 10px 0px 0px 10px;
+    
 }
 .article12{
     width: 60%;
@@ -162,6 +179,7 @@ footer{
 .Recom{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .reco1{
     width: 24%;
@@ -198,8 +216,8 @@ footer{
 /* Subscription */
 
 .subscribe{
-    height: 150px;
-    background-color: green;
+    height: 250px;
+    background-color: rgb(187, 250, 187);
     display:flex;
     flex-direction: column;
     justify-content:center;
@@ -207,15 +225,103 @@ footer{
 
 }
 
+.form div{
+    margin: 10px;
+}
+.butt{
+    display: flex;
+ 
+    justify-content: center;
+    
+}
+
+.butt button{
+    width: 100%;
+}
+
+.form input{
+    line-height: 42px;
+    border-radius: 5px;
+    padding-left: 20px;
+    border: 1px solid grey;
+}
+
+/* media Queries */
+/* min,max, <> */
+/* laptops */
+
+ /* @media (max-width: 992px) {
+    .content{
+        background: red;
+    }
+ } */
+
+ /* mobile devices */
+
+ /* @media (max-width: 500px) {
+    .content{
+       display: none;
+    }
+ } */
+
+@media (width < 992px){
+    .art{
+        display: flex;
+       flex-direction: column;
+       
+    }
+
+    .article{
+        width: 100%;
+    }
+    .sidelink{
+        margin-top: 15px;
+        display: flex;
+        width: 100%;
+        gap: 1rem;
+        
+    }
+}
 
 
 
+@media (max-width:500px){
+    .article1{
+        display: flex;
+        flex-direction: column;
+    }
+    .article11{
+        width: 100%;
+        
+    }
+    .article12{
+       width: 95%;
+    }
+    .sidelink{
+        display: flex;
+        flex-direction: column;
+    }
+    .Recom{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .reco1{
+        width: 100%;
+    }
 
+    .form{
+        display: flex;
+        flex-direction: column;
+    }
+    .form div{
+        margin-bottom: 10px;
+    }
 
-
-
-
-
+    .butt button{
+        width: 100%;
+    }
+}
 
 
 
